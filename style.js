@@ -36,7 +36,7 @@ const getData = async(input) => {
         `*/
 };
 window.addEventListener("load", function(){
-  getData("Cricket");
+  getData("india");
 })
 SearchBtn.addEventListener("click", function(){
 let inputText = inputData.value;
