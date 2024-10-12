@@ -36,7 +36,7 @@ const getData = async(input) => {
         `*/
 };
 window.addEventListener("load", function(){
-  getData(india);
+  getData('india');
 })
 SearchBtn.addEventListener("click", function(){
 let inputText = inputData.value;
@@ -58,5 +58,5 @@ function navClick(navName){
     document.getElementById("sports").style.color="white"
     document.getElementById("technology").style.color="rgb(0,140,255)"
   }
-  
+  getData(navName);
 }
