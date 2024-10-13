@@ -33,7 +33,7 @@ const getData = async(input) => {
       window.open(article.url);
     })
   })
-    });
+  
   } else {
     console.error("Error: No articles found in response");
     // Handle the error case (e.g., display an error message)
