@@ -16,7 +16,7 @@ const getData = async(input) => {
     //console.log(jsonData.articles);
     jsonData.articles.forEach(function (article) {
       // ... rest of your code using articles
-       console.log(article);
+       //console.log(article);
     let divs = document.createElement("div");
   divs.classList.add("card");
   cardData.appendChild(divs);
