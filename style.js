@@ -20,7 +20,7 @@ const getData = async(input) => {
     jsonData.articles.forEach(function (article) {
       // ... rest of your code using articles
     });
-  } else {
+   else {
     console.error("Error: No articles found in response");
     // Handle the error case (e.g., display an error message)
   }
