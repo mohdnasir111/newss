@@ -7,17 +7,6 @@ let searchType = document.getElementById("type");
 
 const getData = async(input) => {
   let res = await fetch(`https://newsapi.org/v2/everything?q=${input}&apiKey=${key}`
-   if jsonData.articles exists before using forEach
-  if (jsonData && jsonData.articles) {
-    console.log(jsonData.articles);
-    cardData.innerHTML = "";
-    jsonData.articles.forEach(function (article) {
-      // ... rest of your code using articles
-    });
-  } else {
-    console.error("Error: No articles found in response");
-    // Handle the error case (e.g., display an error message)
-  }
                        );
   let jsonData = await res.json();
   console.log(jsonData.articles);
