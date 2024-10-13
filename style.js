@@ -4,16 +4,15 @@ let SearchBtn = document.getElementById("searchBtn");
 let inputData = document.getElementById("inputData");
 let searchType = document.getElementById("type");
 
-
+let jsonData;
 const getData = async(input) => {
   let res = await fetch(`https://newsapi.org/v2/everything?q=${input}&apiKey=${key}`
                        );
-  let jsonData = await res.json();
+  jsonData = await res.json();
   console.log(jsonData.articles);
   cardData.innerHTML="";
   
 }
-let jsonData;
   if jsonData.articles exists before using forEach
   if (jsonData && jsonData.articles) {
     console.log(jsonData.articles);
