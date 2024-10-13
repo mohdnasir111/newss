@@ -31,14 +31,14 @@ const getData = async(input) => {
         `
     divs.addEventListener("click",function(){
       window.open(article.url);
-    })
-  })
+    });
+  });
   
   } else {
     console.error("Error: No articles found in response");
     // Handle the error case (e.g., display an error message)
   }
-
+}
   /*let divs = document.createElement("div");
   divs.classList.add("card");
   cardData.appendChild(divs);
@@ -50,11 +50,11 @@ const getData = async(input) => {
 
 window.addEventListener("load", function(){
   getData('india');
-})
+});
 SearchBtn.addEventListener("click", function(){
 let inputText = inputData.value;
 getData(inputText);
-})
+});
 function navClick(navName){
   if(navName =="politics"){
     document.getElementById("politics").style.color="rgb(0,140,255)"
