@@ -7,15 +7,14 @@ let searchType = document.getElementById("type");
 let jsonData;
 const getData = async (input) => {
   try {
-    let res = await fetch(`https://newsapi.org/v2/everything?q=<span class="math-inline">\{input\}&apiKey\=</span>{key}`);
+    let res = await fetch(`https://newsapi.org/v2/everything?q=${input}&apiKey=${key}`);
     if (!res.ok) {
       throw new Error(`Network response was not ok (${res.status})`);
     }
 
     jsonData = await res.json();
     console.log(jsonData.articles);
-  }
-}
+
     // Check for articles and render content
     if (jsonData && jsonData.articles) {
       jsonData.articles.forEach(function (article) {
@@ -25,8 +24,8 @@ const getData = async (input) => {
         cardData.appendChild(divs);
         searchType.innerHTML = "Search:" + input;
         divs.innerHTML = `
-          <img src="<span class="math-inline">\{article\.urlToImage\}" alt\=""\>
-<h3\></span>{article.title}</h3>
+          <img src="${article.urlToImage}" alt="">
+          <h3>${article.title}</h3>
           <p>${article.description}</p>
         `;
         divs.addEventListener("click", function () {
@@ -65,8 +64,8 @@ function navClick(navName) {
   }
   if (navName == "technology") {
     document.getElementById("politics").style.color = "white";
-     document.getElementById("sports").style.color = "white";
-    document.getElementById("technology").style.color =  "rgb(0,140,255)";
+    document.getElementById("sports").style.color = "white";
+    document.getElementById("technology").style.color = "rgb(0,140,255)";
   }
-getData(navName);
+  getData(navName);
 }
