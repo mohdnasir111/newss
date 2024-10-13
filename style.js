@@ -10,8 +10,6 @@ const getData = async(input) => {
                        );
   jsonData = await res.json();
   console.log(jsonData.articles);
-  
-  
 }
   if jsonData.articles exists before using forEach
   if (jsonData && jsonData.articles) {
