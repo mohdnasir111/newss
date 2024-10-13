@@ -10,7 +10,7 @@ const getData = async(input) => {
                        );
   jsonData = await res.json();
   console.log(jsonData.articles);
-  cardData.innerHTML="";
+  
   
 }
   if jsonData.articles exists before using forEach
