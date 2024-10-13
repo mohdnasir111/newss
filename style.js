@@ -14,7 +14,8 @@ const getData = async (input) => {
 
     jsonData = await res.json();
     console.log(jsonData.articles);
-
+  }
+}
     // Check for articles and render content
     if (jsonData && jsonData.articles) {
       jsonData.articles.forEach(function (article) {
