@@ -4,7 +4,7 @@ let SearchBtn = document.getElementById("searchBtn");
 let inputData = document.getElementById("inputData");
 let searchType = document.getElementById("type");
 
-
+let jsonData;
 const getData = async(input) => {
   let res = await fetch(`https://newsapi.org/v2/everything?q=${input}&apiKey=${key}`
                        );
