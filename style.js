@@ -14,7 +14,6 @@ const getData = async(input) => {
   if jsonData.articles exists before using forEach
   if (jsonData && jsonData.articles) {
     console.log(jsonData.articles);
-    cardData.innerHTML = "";
     jsonData.articles.forEach(function (article) {
       // ... rest of your code using articles
        console.log(article);
