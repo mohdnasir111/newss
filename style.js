@@ -19,15 +19,7 @@ const getData = async(input) => {
     cardData.innerHTML = "";
     jsonData.articles.forEach(function (article) {
       // ... rest of your code using articles
-    });
-   else {
-    console.error("Error: No articles found in response");
-    // Handle the error case (e.g., display an error message)
-  }
-
-
-  jsonData.articles.forEach(function(article){
-    console.log(article);
+       console.log(article);
     let divs = document.createElement("div");
   divs.classList.add("card");
   cardData.appendChild(divs);
@@ -41,6 +33,12 @@ const getData = async(input) => {
       window.open(article.url);
     })
   })
+    });
+  } else {
+    console.error("Error: No articles found in response");
+    // Handle the error case (e.g., display an error message)
+  }
+
   /*let divs = document.createElement("div");
   divs.classList.add("card");
   cardData.appendChild(divs);
@@ -49,7 +47,7 @@ const getData = async(input) => {
         <h3>${jsonData.articles[0].title}</h3>
         <p>${jsonData.articles[0].description}</p>
         `*/
-};
+
 window.addEventListener("load", function(){
   getData('india');
 })
