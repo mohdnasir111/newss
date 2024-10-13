@@ -13,6 +13,19 @@ const getData = async(input) => {
   cardData.innerHTML="";
   
 }
+  if jsonData.articles exists before using forEach
+  if (jsonData && jsonData.articles) {
+    console.log(jsonData.articles);
+    cardData.innerHTML = "";
+    jsonData.articles.forEach(function (article) {
+      // ... rest of your code using articles
+    });
+  } else {
+    console.error("Error: No articles found in response");
+    // Handle the error case (e.g., display an error message)
+  }
+
+
   jsonData.articles.forEach(function(article){
     console.log(article);
     let divs = document.createElement("div");
