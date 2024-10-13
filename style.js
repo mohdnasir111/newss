@@ -13,7 +13,7 @@ const getData = async(input) => {
 }
   if jsonData.articles exists before using forEach
   if (jsonData && jsonData.articles) {
-    console.log(jsonData.articles);
+    //console.log(jsonData.articles);
     jsonData.articles.forEach(function (article) {
       // ... rest of your code using articles
        console.log(article);
